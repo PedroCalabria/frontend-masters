@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Courier New", Courier, monospace;
+    background-color: rgb(65, 61, 61);
+    align-items: center;
+    display: flex;
+}
+
+.calculadora {
+    width: 400px;
+    align-items: center;
+    display: grid;
+    grid-template-areas: 
+        "resultado" 
+        "calc-buttons"
+    ;
+}
+
+.resultado {
+    grid-area: resultado;
+    font-size: 40px;
+    text-align: right;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 20px 5px;
+}
+
+.calc-buttons {
+    grid-area: calc-buttons;
+    display: grid;
+    grid-template-areas: 
+        "button-C button-C button-back button-div"
+        "button-sete button-oito button-nove button-mult"
+        "button-quatro button-cinco button-seis button-sub"
+        "button-um button-dois button-tres button-add"
+        "button-zero button-zero button-zero button-igual"
+    ;
+}
+
+.button {
+    height: 100px;
+    border-right: 2px solid black ;
+    border-bottom: 2px solid black ;
+    border-left: none;
+    border-top: none;
+    font-size: 30px;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    background-color: #D8D9DB;
+}
+
+.button:hover {
+    background-color: #e9e9eb;
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: #cbccce;
+}
+
+.button-op {
+    background-color: #DF974C;
+    border-left: none ;
+    border-top: none ;
+    border-right: none;
+    border-bottom: 2px solid black;
+    color: white;
+}
+
+.button-op:hover {
+    background-color: #f5a754;
+}
+
+.button-op:active {
+    background-color: #cf8d46;
+}
+
+.button-C {
+    grid-area: button-C;
+}
+
+.button-back {
+    grid-area: button-back;
+}
+
+.button-div {
+    grid-area: button-div;
+}
+
+.button-sete {
+    grid-area: button-sete;
+}
+
+.button-oito {
+    grid-area: button-oito;
+}
+
+.button-nove {
+    grid-area: button-nove;
+}
+
+.button-mult {
+    grid-area: button-mult;
+}
+
+.button-quatro {
+    grid-area: button-quatro;
+}
+
+.button-cinco {
+    grid-area: button-cinco;
+}
+
+.button-seis {
+    grid-area: button-seis;
+}
+
+.button-sub {
+    grid-area: button-sub;
+}
+
+.button-um {
+    grid-area: button-um;
+}
+
+.button-dois {
+    grid-area: button-dois;
+}
+
+.button-tres {
+    grid-area: button-tres;
+}
+
+.button-add {
+    grid-area: button-add;
+}
+
+.button-zero {
+    grid-area: button-zero;
+    border-bottom: none;
+}
+
+.button-igual {
+    grid-area: button-igual;
+    border-bottom: none;
+}

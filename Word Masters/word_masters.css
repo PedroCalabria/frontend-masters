@@ -1,0 +1,144 @@
+body {
+    background-color: rgb(92, 89, 89);
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header {
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.brand{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+
+.loading-section {
+    display: flex;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.game-section {
+    margin: 10px auto;
+    display: flex;
+    max-width: 295px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 5px;
+}
+
+.letter-box {
+    width: 40px;
+    height: 40px;
+    border: 3px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: white;
+}
+
+.correct {
+    border-color: darkgreen;
+}
+  
+.close {
+    border-color: goldenrod;
+}
+
+.wrong {
+    border-color: rgb(201, 43, 43);
+}
+
+.invalid {
+    animation: flash 1s;
+}
+
+@keyframes flash {
+    5% {
+        border-color: crimson;
+    }
+
+    100% {
+        border-color: grey;
+    }
+}
+
+.spiral {
+    font-size: 30px;
+    animation: spin 1.5s linear infinite;
+  }
+  
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.winner {
+    animation: rainbow 4s infinite linear;
+}
+
+@keyframes rainbow {
+    100%,
+    0% {
+      color: rgb(255, 0, 0);
+      border-color: rgb(255, 0, 0);
+    }
+    8% {
+      color: rgb(255, 127, 0);
+      border-color: rgb(255, 127, 0);
+    }
+    16% {
+      color: rgb(255, 255, 0);
+      border-color: rgb(255, 255, 0);
+    }
+    25% {
+      color: rgb(127, 255, 0);
+      border-color: rgb(127, 255, 0);
+    }
+    33% {
+      color: rgb(0, 255, 0);
+      border-color: rgb(0, 255, 0);
+    }
+    41% {
+      color: rgb(0, 255, 127);
+      border-color: rgb(0, 255, 127);
+    }
+    50% {
+      color: rgb(0, 255, 255);
+      border-color: rgb(0, 255, 255);
+    }
+    58% {
+      color: rgb(0, 127, 255);
+      border-color: rgb(0, 127, 255);
+    }
+    66% {
+      color: rgb(0, 0, 255);
+      border-color: rgb(0, 0, 255);
+    }
+    75% {
+      color: rgb(127, 0, 255);
+      border-color: rgb(127, 0, 255);
+    }
+    83% {
+      color: rgb(255, 0, 255);
+      border-color: rgb(255, 0, 255);
+    }
+    91% {
+      color: rgb(255, 0, 127);
+      border-color: rgb(255, 0, 127);
+    }
+}

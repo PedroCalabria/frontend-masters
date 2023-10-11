@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #EFEFEF;
+}
+
+.header {
+    display: flex;
+    background-color: #43281C;
+    justify-content:center;
+    align-items: center;
+}
+
+.header-image {
+    height: 25px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.header-text {
+    color: #FBF2C0;
+    font-size: 25px;
+    margin: 25px 0;
+}
+
+.info {
+    display: grid;
+    grid-template-areas: 
+        "item payment-info"
+        "total total"
+    ;
+    row-gap: 30px;
+    height: fit-content;
+    padding: 20px;
+}
+
+.items, .client, .payment {
+    margin: 10px;
+    background-color: #EEE1D5;
+    height: fit-content;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.2);;
+}
+
+.items {
+    padding-bottom: 40px;
+}
+
+.title {
+    display: block;
+    color: #885A2D;
+    font-size: 16px;
+    font-weight: normal;
+    width: 100%;
+}
+
+.payment-info {
+    grid-area: payment-info;
+}
+
+.item {
+grid-area: item;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas: 
+    "item-quantity description item-price"
+  ;
+  border-bottom: 2px solid #DDB892;
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.item-quantity {
+    grid-area: item-quantity;
+
+}
+
+.description {
+    grid-area: description;
+}
+
+.item-name {
+    font-weight: bold;
+    margin: 10px;
+}
+
+.item-add {
+    color: #90653C;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.item-price {
+    grid-area: item-price;
+    font-weight: bold;
+}
+
+.input-group{
+    position: relative;
+    display: block;
+    margin: 15px 0;
+}
+
+.custom-input {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 8px;
+    border-radius: 50px;
+    border: 2px solid #90653C;
+    width: 100%;
+    text-indent: 18px;
+    font-size: 18px;
+}
+
+.input-label {
+    background-color: #EEE1D5;
+    color: #90653C;
+    font-size: 12px;
+    position: absolute;
+    left: 25px;
+    top: -10px;
+    padding: 0 2px;
+}
+
+.short-input {
+    max-width: 200px;
+}
+
+.total {
+    grid-area: total;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.total-table {
+    width: 100%;
+    max-width: 500px;
+    margin: 30px 0 40px;
+}
+
+.total-table tr:last-child {
+    font-weight: bold;
+    
+}
+
+.total-table td {
+    padding: 10px;
+}
+
+.total-table td:last-child {
+    text-align: right;
+
+}
+
+.order-button {
+    background-color: #DEB993;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 25px;
+}
